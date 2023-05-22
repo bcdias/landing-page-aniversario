@@ -1,0 +1,47 @@
+@use 'variables';
+
+.hero {
+    padding: 64px 0 200px;
+    background-image: url('../img/rock.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$secondaryTextColor;
+        content: '';
+        opacity: .7;
+    }
+
+    &__text {
+        margin: 64px 0 94px;
+        font-family: 'Rock Salt', cursive;;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
+
+.contador{
+    color: variables.$red;
+}
